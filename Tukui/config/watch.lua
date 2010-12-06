@@ -15,6 +15,41 @@
 -- Spells that should be shown with an icon in the middle of the screen when not buffed.
 --------------------------------------------------------------------------------------------
 
+
+-- List of nameplate names we want to hide nameplates of
+TukuiDB.NPCList = {
+	--Gundrak
+	["Fanged Pit Viper"] = true,
+	["Crafty Snake"] = true,
+
+	--Shaman Totems
+	["Earth Elemental Totem"] = true,
+	["Fire Elemental Totem"] = true,
+	["Fire Resistance Totem"] = true,
+	["Flametongue Totem"] = true,
+	["Frost Resistance Totem"] = true,
+	["Healing Stream Totem"] = true,
+	["Magma Totem"] = true,
+	["Mana Spring Totem"] = true,
+	["Nature Resistance Totem"] = true,
+	["Searing Totem"] = true,
+	["Stoneclaw Totem"] = true,
+	["Stoneskin Totem"] = true,
+	["Strength of Earth Totem"] = true,
+	["Windfury Totem"] = true,
+	["Totem of Wrath"] = true,
+	["Wrath of Air Totem"] = true,
+
+	--The gayest ability in the game
+	["Army of the Dead Ghoul"] = true,
+
+	--Hunter Trap
+	["Venomous Snake"] = true,
+	["Viper"] = true,
+
+	--Test
+	--["Unbound Seer"] = true,
+}
 TukuiDB.remindbuffs = {
 	PRIEST = {
 		588, -- inner fire
@@ -46,9 +81,7 @@ TukuiDB.remindbuffs = {
 	},
 	DEATHKNIGHT = {
 		57330, -- horn of Winter
-		31634, -- strength of earth totem
-		6673, -- battle Shout
-		93435, -- roar of courage (hunter pet)
+		31634, -- Shaman Strength of Earth Totem
 	},
 }
 
@@ -77,8 +110,6 @@ if TukuiCF["arena"].spelltracker == true then
 		[15487] = 45, -- silence priest
 		[34490] = 20, -- i hate hunter silencing shot
 		[85285] = 10, -- paladin got a kick now? lol
-		[80964] = 10, -- feral skull bash (cat) (NOTE: 60 seconds if not feral specced)
-		[80965] = 10, -- feral skull bash (bear) (NOTE: 60 seconds if not feral specced)
 	}
 end
 
@@ -110,7 +141,7 @@ if TukuiCF["unitframes"].raidunitdebuffwatch == true then
 				{61295, "TOPLEFT", {0.7, 0.3, 0.7}}, -- Riptide 
 				{51945, "TOPRIGHT", {0.2, 0.7, 0.2}}, -- Earthliving
 				{16177, "BOTTOMLEFT", {0.4, 0.7, 0.2}}, -- Ancestral Fortitude
-				{974, "BOTTOMRIGHT", {0.7, 0.4, 0}, true}, -- Earth Shield
+				{974, "BOTTOMRIGHT", {0.7, 0.4, 0}}, -- Earth Shield
 			},
 			ALL = {
 				{14253, "RIGHT", {0, 1, 0}}, -- Abolish Poison

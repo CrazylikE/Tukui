@@ -75,7 +75,10 @@ TukuiCF["actionbar"] = {
 }
 
 TukuiCF["nameplate"] = {
-	["enable"] = true,                     -- enable nice skinned nameplates that fit into tukui
+	["enable"] = true,                      -- enable nice skinned nameplates that fit into tukui
+			["showhealth"] = true,			-- show health text on nameplate
+			["enhancethreat"] = true,		-- threat features based on if your a tank or not
+			["overlap"] = false,			-- allow nameplates to overlap
 }
 
 TukuiCF["bags"] = {
